@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+<h1>Square root calculator</h1>
+<p id="sqrt"></p>
+<script>
+    'use strict';
+    const userConfirmation = confirm('Should I calculate the square root?')
+
+    if (userConfirmation) {
+      const userInput = prompt("Enter number here: ")
+      const integerNumber = parseInt(userInput)
+
+      if (userInput < 0) {
+        document.querySelector('#sqrt').innerHTML = 'The square root of a negative number is not defined'
+      }
+      else {
+        const sqrt = Math.sqrt(integerNumber)
+        document.querySelector('#sqrt').innerHTML = `${sqrt}`
+      }
+    }
+</script>
+<script>
+</script>
+</body>
+</html>

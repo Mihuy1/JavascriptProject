@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+<h1>Mathematics</h1>
+<p id="sum"></p>
+<p id="product"></p>
+<p id="average"></p>
+<script>
+    'use strict';
+
+const input1 = prompt('Give first integer');
+const input2 = prompt('Give second integer');
+const input3 = prompt('Give third integer');
+
+// Convert the input strings to numbers
+const number1 = parseFloat(input1);
+const number2 = parseFloat(input2);
+const number3 = parseFloat(input3);
+
+// Check if the conversion was successful
+if (!isNaN(number1) && !isNaN(number2) && !isNaN(number3)) {
+  const sum = number1 + number2 + number3;
+  const product = number1 * number2 * number3;
+  const average = sum / 3;
+
+  document.querySelector('#sum').innerHTML = `Sum of integers: ${sum}`;
+  document.querySelector('#product').innerHTML = `Product of integers: ${product}`;
+  document.querySelector('#average').innerHTML = `Average of integers: ${average}`;
+}
+
+
+</script>
+</body>
+</html>
