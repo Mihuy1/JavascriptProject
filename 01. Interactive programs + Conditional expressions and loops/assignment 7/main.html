@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+<h1>Dice</h1>
+<p id="dice"></p>
+<script>
+    'use strict';
+    const userInput = prompt('Enter dice roll amount:')
+    const diceRoll = parseInt(userInput)
+    let sum = 0
+
+    for (let i = 1; i <= diceRoll; i++) {
+        let randomVal = Math.floor(Math.random() * 6) + 1;
+        console.log(randomVal)
+        sum += randomVal
+    }
+
+    document.querySelector('#dice').innerHTML = `Dice sum is ${sum}`
+</script>
+<script>
+</script>
+</body>
+</html>
