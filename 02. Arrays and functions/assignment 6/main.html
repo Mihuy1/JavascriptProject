@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+<h1>Dice stuff</h1>
+<p id="dice"></p>
+<script>
+    'use strict';
+    const array = [];
+
+    function RandomDiceRoll(sides) {
+        return Math.floor(Math.random() * sides) + 1;
+    }
+
+     const userInput = parseInt(prompt('How many sides on dice?'))
+
+    while(true) {
+        let diceRoll = RandomDiceRoll(21);
+
+        array.push(diceRoll);
+
+        if (diceRoll === userInput) break;
+    }
+
+    const list = document.createElement('ul');
+
+    for (let i = 0; i < array.length; i++) {
+        let roll = array[i];
+        let listItem = document.createElement('li');
+        listItem.textContent = roll;
+        list.appendChild(listItem);
+    }
+
+    document.body.appendChild(list);
+
+</script>
+</body>
+</html>

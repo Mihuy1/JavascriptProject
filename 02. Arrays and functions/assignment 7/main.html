@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+<h1>Dice stuff</h1>
+<p id="dice"></p>
+<script>
+
+    array = [];
+
+    function RandomDiceRoll() {
+        return Math.floor(Math.random() * 6) + 1;
+    }
+
+    while(true) {
+        let diceRoll = RandomDiceRoll();
+
+        array.push(diceRoll);
+
+        if (diceRoll === 6) break;
+    }
+
+    const list = document.createElement('ul');
+
+    for (i = 0; i < array.length; i++) {
+        let roll = array[i];
+        let listItem = document.createElement('li');
+        listItem.textContent = roll;
+        list.appendChild(listItem);
+    }
+
+    document.body.appendChild(list);
+
+</script>
+</body>
+</html>

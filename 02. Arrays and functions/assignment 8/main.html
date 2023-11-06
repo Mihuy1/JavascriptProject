@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+<h1>Dice stuff</h1>
+<p id="text"></p>
+<script>
+
+    const array = ['Johnny', 'DeeDee', 'Joey', 'Marky'];
+
+    function concat(array) {
+        let string = '';
+
+        for (let i = 0; i < array.length;i++) {
+            string += array[i];
+        }
+
+        return string;
+    }
+
+    const string = concat(array);
+    document.getElementById('text').innerHTML = string;
+
+</script>
+</body>
+</html>

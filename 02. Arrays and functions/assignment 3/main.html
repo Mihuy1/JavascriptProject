@@ -3,29 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="number.js" defer></script>
+    <script src="main.js" defer></script>
 </head>
 <body>
-<h1>Largest To Smallest</h1>
-<p id="#"></p>
+<h1>Unordered dog list</h1>
+<p id="dogs"></p>
 <script>
-    const array = [];
+'use strict';
+const dogNames = [];
 
-
-    while(true) {
-
-        let number = parseInt(prompt('Give a number (to stop prompts, enter zero):'));
-
-        if (number === 0) break;
-
-        array.push(number)
+for (let i = 0; i < 6; i++) {
+    dogNames.push(prompt(`Give your dog name (${i+1}):`));
     }
 
-    array.sort((a, b) => b - a);
+dogNames.sort().reverse();
 
-    for (const number of array) {
-        console.log(number);
-    }
+const unordered = document.createElement('ul');
+
+for(let i = 0; i < dogNames.length; i++) {
+    let listItem = document.createElement('li');
+    listItem.textContent = dogNames[i];
+    unordered.appendChild(listItem)
+}
+
+document.body.appendChild(unordered)
+
 </script>
 </body>
 </html>

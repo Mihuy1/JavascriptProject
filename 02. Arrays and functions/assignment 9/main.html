@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+<h1>Dice stuff</h1>
+<p id="text"></p>
+<script>
+    'use strict';
+    const array = [2, 4, 7]
+    function even(array) {
+        const evenArray = []
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] % 2 === 0) {
+                evenArray.push(array[i]);
+            }
+        }
+
+        return evenArray;
+    }
+
+    const newArray = even(array);
+
+    console.log(array);
+    console.log(newArray);
+
+</script>
+</body>
+</html>

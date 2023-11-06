@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+<h1>Smallest to largest</h1>
+<p id="numbers"></p>
+<script>
+    array = [];
+
+    while (true) {
+        let input = parseInt(prompt('Enter a unique number here:'));
+
+        if (array.includes(input)) {
+            alert('You have already enter this number, ending loop...')
+            break;
+        }
+
+        array.push(input);
+    }
+    array.sort((a, b) => a - b);
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i]);
+        document.getElementById('numbers').textContent += array[i] + ' ';
+    }
+
+</script>
+</body>
+</html>
