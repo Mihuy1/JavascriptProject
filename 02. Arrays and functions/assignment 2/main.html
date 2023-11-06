@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="participants.js" defer></script>
+</head>
+<body>
+<h1>Participants</h1>
+<p id="#"></p>
+<script>
+    const array = []
+
+    const participantAmount = parseInt(prompt('Enter participant count:'));
+
+    for (let i = 0; i < participantAmount; i++) {
+        let name = prompt(`Enter participant ${i + 1} name:`);
+        array.push(name);
+    }
+
+    array.sort();
+
+    const participantList = document.createElement("ol");
+    for (let i = 0; i < array.length; i++) {
+        const li = document.createElement("li");
+        li.textContent = array[i];
+        participantList.appendChild(li)
+    }
+
+    document.body.appendChild(participantList)
+</script>
+</body>
+</html>

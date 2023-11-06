@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="number.js" defer></script>
+</head>
+<body>
+<h1>Largest To Smallest</h1>
+<p id="#"></p>
+<script>
+    const array = [];
+
+
+    while(true) {
+
+        let number = parseInt(prompt('Give a number (to stop prompts, enter zero):'));
+
+        if (number === 0) break;
+
+        array.push(number)
+    }
+
+    array.sort((a, b) => b - a);
+
+    for (const number of array) {
+        console.log(number);
+    }
+</script>
+</body>
+</html>
